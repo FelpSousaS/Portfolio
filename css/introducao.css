@@ -1,0 +1,90 @@
+@keyframes shakeImage {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+.perfil_img{
+    border-radius: 100%;
+}
+.profile-image {
+    animation: rotateImage 6s infinite linear;
+
+}
+.introducao{
+    max-width: auto;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.introducao h1{
+    font-size: 6.5rem;
+    line-height: 1.125;
+    color: #87a1f2;
+    margin-bottom: 30px;
+    position: relative;
+    
+}
+.introducao h1::before{
+    content: "";
+    display: block;
+    width: 130px;
+    height: 100px;
+    background:  url("../img/detalhe.svg") no-repeat center;
+    position: absolute;
+    top: -15px;
+    left: -40px;
+    z-index: -1;
+    animation: shakeImage 0.8s infinite;
+} 
+
+.introducao p{ 
+    font-size: 1.5rem;
+    color: #6fc659
+    ;
+}
+
+@media (max-width: 1000px){
+    .introducao h1{
+        font-size: 3rem;
+    }
+
+}
+@media (max-width:800px){
+
+    .introducao{
+        grid-template-columns:  1fr 1fr;
+        gap: 40px;
+    }
+    .introducao h1{
+        font-size: 2rem; 
+        
+    }
+    .introducao h1::before{
+        width: 30px;
+        height: 10px;
+        left: 0px;
+    }
+
+}
+@media (max-width: 400px){
+
+    .introducao{
+        grid-template-columns:  1fr ;
+    }
+
+    .introducao img{
+        display: none;
+        
+    }
+
+}

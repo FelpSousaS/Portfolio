@@ -1,0 +1,139 @@
+.experiencia{
+    max-width: auto;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+}
+
+.experiencia .subtitulo{
+    color:#13132A;
+
+}
+
+.experiencia-texto{
+    font-size: 1.5rem;
+    line-height: 1.33;
+    max-width: 50ch;
+    margin-bottom: 60px;
+    color: #e7ecfc;
+}
+
+
+.experiencia-texto strong{
+    color: #141414
+}
+
+.link{
+    text-decoration: none;
+}
+.projeto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    padding: 20px;
+    background: #070715;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    position: relative;
+    color: #6fc659;
+}
+.projeto:hover{
+    box-shadow: 0 4px 8px #e7ecfc;
+}
+.projeto_exp{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 10px 20px;
+    padding: 20px;
+    background: #070715;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    position: relative;
+    color: #d9f9cf;
+}
+.projeto::before{
+    content:'';
+    display: block;
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(#a1f287, #6fc659);
+    position: absolute;
+    top: 20px;
+    left: -4px;
+}
+.projeto_exp strong{
+    color:#6fc659
+}
+
+.projeto-ano{
+    position: absolute;
+    top: 22px;
+    left: -100px;
+    color: #e7ecfc;
+    text-align: right;
+    width: 80px;
+    font-size:  0.875rem; 
+}
+
+.projeto-titulo{
+    font-size: 1.125rem;
+    line-height: 1.1;
+    font-weight: bold ;
+}
+
+.projeto-texto{
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: #e7ecfc;
+}
+
+.projeto-habilidades{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: start;
+}
+.projeto_exp .projeto-habilidades li{
+    flex: 1 1 auto;
+}
+.projeto-habilidades li{
+    
+    font-size:  0.875rem;
+    line-height:  1.4;
+    border-radius: 4px;
+    background: #13132A;
+    padding: 5px 10px;  
+    color: #d9f9cf;
+}
+
+@media (max-width: 800px){
+    .experiencia{
+        grid-template-columns:  1fr;
+        gap: 40px;
+    }
+    .experiencia .subtitulo{
+        color: #87a1f2;
+        
+    }
+    .experiencia-texto{
+        font-size: 1.25rem;
+    }
+    .projeto-ano{
+        position: initial;
+        order: 1;
+        width: initial;
+        text-align: left;
+        font-weight: bold;
+        color: #87a1f2;
+        ;
+    }
+    
+}
+@media (max-width: 400px){
+    .projeto{
+        grid-template-columns: 1fr;
+    }
+    
+}
